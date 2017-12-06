@@ -5,6 +5,7 @@
 .*/node_modules/jss/lib/.*\.js\.flow
 .*/node_modules/eslint-plugin-jsx-a11y/*
 .*/node_modules/styled-components/.*
+.*/node_modules/react-motion/lib/.*\.js\.flow.*
 
 [include]
 
