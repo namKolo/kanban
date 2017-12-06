@@ -1,10 +1,11 @@
 // @flow
-import React, { Component } from 'react';
+import { Component } from 'react';
+import type { ComponentType } from 'react';
 import { DragDropContext } from 'react-dnd';
 import HTML5Backend from 'react-dnd-html5-backend';
 
 type Props = {
-  children: React$Node
+  children: ?React$Node
 };
 
 class DragDropContextWrapper extends Component<Props> {
@@ -13,4 +14,7 @@ class DragDropContextWrapper extends Component<Props> {
   }
 }
 
-export default DragDropContext(HTML5Backend)(DragDropContextWrapper);
+const ExportedComponent: ComponentType<Props> = DragDropContext(HTML5Backend)(
+  DragDropContextWrapper
+);
+export default ExportedComponent;
